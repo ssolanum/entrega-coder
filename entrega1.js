@@ -46,13 +46,18 @@ for (let i = 0; i < 5; i++) {
     };
 }
 
-if (puntajeComputadora == puntajeJugador) {
-    alert("La partida quedo empatada");
-} else if (puntajeComputadora > puntajeJugador) {
-    alert("La computadora gana!");
-} else {
-    alert("El jugador gana!");
+switch(true) {
+    case puntajeJugador > puntajeComputadora:
+        alert("El jugador gana!");
+        break;
+    case puntajeJugador < puntajeComputadora:
+        alert("La computadora gana!");
+        break;
+    case puntajeJugador == puntajeComputadora:
+        alert("Es un empate!");
+        break;
+    default:
+        alert("Error en la comparacion de puntajes");
 }
-
 
 
